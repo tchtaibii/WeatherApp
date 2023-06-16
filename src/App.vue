@@ -1,17 +1,14 @@
 <template>
   <WidgetContent />
-  <!-- <DataFetch /> -->
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component';
 import WidgetContent from './components/WidgetContent.vue';
-import DataFetch from './components/DataFetch.vue';
 
 @Options({
   components: {
     WidgetContent,
-    DataFetch
   },
 })
 export default class App extends Vue { }

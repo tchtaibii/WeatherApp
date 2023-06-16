@@ -45,18 +45,14 @@ export default class WidgetContent extends Vue {
   longitude: number | null = null;
   weatherData: any = null;
   error: string | null = null;
-  data(): object {
-    return {
-      up: require('@/assets/up.svg'),
-      set: require('@/assets/set.svg'),
-      circle: require('@/assets/circle.svg'),
-      more: { RealFeel: '18°C', Humidity: '63%', w_Force: '3', Pressure: '1012hPa' },
-      sunSet: '00:00',
-      sunUp: '00:00',
-      dateNow: '00:00',
-      datesObj: [],
-    }
-  }
+  datesObj: object[] | null = null;
+  up: any = require('@/assets/up.svg');
+  set: any = require('@/assets/set.svg');
+  circle: any = require('@/assets/circle.svg');
+  more: any = { RealFeel: '18°C', Humidity: '63%', w_Force: '3', Pressure: '1012hPa' };
+  sunSet: any  = '00:00';
+  sunUp: any  = '00:00';
+  dateNow: any = 0;
 
   mounted() {
     this.getLocation();
@@ -69,8 +65,6 @@ export default class WidgetContent extends Vue {
           this.latitude = position.coords.latitude;
           this.longitude = position.coords.longitude;
           this.getWeatherData();
-          console.log('hey', this.datesObj);
-
         },
         (error) => {
           this.error = 'Error: Unable to retrieve location.';
