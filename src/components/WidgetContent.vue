@@ -232,7 +232,7 @@ export default class WidgetContent extends Vue {
         font-style: normal;
         font-weight: 500;
         font-size: toRem(15);
-        color: #000843;
+        color: #4B4474;
       }
     }
   }
