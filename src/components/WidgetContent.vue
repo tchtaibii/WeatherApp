@@ -101,7 +101,7 @@ export default class WidgetContent extends Vue {
         this.datesObj = Array.from(this.weatherData.forecast.forecastday[0].hour).map((e: any, index) => {
           return {
             time: e.time.slice(11, 13),
-            tempC: e.temp_c.toString(),
+            tempC: e.temp_c.toString() + '°C',
             img: e.condition.icon
           };
         });
@@ -232,7 +232,7 @@ export default class WidgetContent extends Vue {
         font-style: normal;
         font-weight: 500;
         font-size: toRem(15);
-        color: #B7B7B7;
+        color: #000843;
       }
     }
   }
