@@ -77,7 +77,7 @@ export default class WidgetContent extends Vue {
 
   getWeatherData() {
     const apiKey = '0c173054ba0b44ce9a8185519231506'; // Replace with your actual weather API key
-    const apiUrl = `http://api.weatherapi.com/v1/forecast.json`;
+    const apiUrl = `https://api.weatherapi.com/v1/forecast.json`;
 
     axios
       .get(apiUrl, {
