@@ -1,4 +1,5 @@
-# weather-app1
+# weather-app
+https://vue-weather-js-tchtaibi.netlify.app/
 
 ## Project setup
 ```
